@@ -1,0 +1,413 @@
+//  SECTION 1: JAVASCRIPT LANGUAGE BASICS.
+
+
+// Lecture 1: Variables
+
+/*
+var name = "John";
+console.log(name);
+
+var lastName = "Smith";
+console.log(lastName);
+
+var age = 26;
+console.log(age);
+
+var fullAge = true;
+console.log(fullAge);
+
+//*************************************************************************
+*/
+
+// Lecture 2: Variables Continued
+
+/*
+var name = "John";
+var age = 26;
+console.log(name + ' ' + age);
+console.log(age + age);
+
+var job, isMarried;
+console.log(job);
+
+job = 'teacher';
+isMarried = false;
+
+console.log(name + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+age = 30
+job = 'Driver';
+
+console.log(name + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+var lastName = prompt('What is the last name?');
+console.log(lastName);
+
+alert(name + ' ' + lastName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
+
+//*************************************************************************
+*/
+
+//  Leacture 3: Operators
+
+/*
+var now = 2018;
+var age = 26;
+
+var birthYear = now - age * 2;
+console.log(birthYear)
+
+var ageJohn = 30;
+var ageMark = 30;
+
+ageMark = ageJohn = (3 + 5) * 4 - 6;
+console.log(ageJohn);
+console.log(ageMark);
+
+ageJohn++;
+console.log(ageJohn);
+
+ageMark *= 2;
+console.log(ageMark);
+
+//************************************************************************
+*/
+
+//Lecture 4: if/else
+
+/*
+
+var name = 'John';
+var age = 26;
+var isMarried = 'No';
+
+if (isMarried === 'yes'){
+    console.log(name + ' is married')
+} else {
+    console.log(name + ' will hopefully marry soon')
+}
+
+isMarried = false;
+
+if (isMarried) {
+    console.log('YES!!!')
+} else {
+    console.log('NO!!!')
+}
+
+if (23 === '23'){
+    console.log('something to print...')
+}
+
+//***********************************************************************
+*/
+
+//  Lecture 5: other operators
+
+/*
+
+var age = 35;
+
+if (age < 20){
+    console.log("John is a teenager")
+} else if (age > 20 && age < 30){
+    console.log("John is a young man")
+} else {
+    console.log('John is a man')
+}
+
+var job = 'cop';
+job = prompt("What is John's job?")
+
+switch (job) {
+    case 'teacher':
+        console.log('John teaches kids')
+        break;
+    case 'driver':
+        console.log('John drives a cab is Lisbon');
+        break;
+    case 'cop':
+        console.log('John helps fight crime');
+        break;
+    default:
+        console.log('John is a ' + job);
+}
+
+//**************************************************************************
+*/
+
+//  First Coding Challenge!!!
+
+/*
+
+var johnHeight = 177;
+var johnAge = 23;
+var johnScore = johnAge * 5 + johnHeight;
+
+var player1Height = 165;
+var player1Age = 39;
+var player1Score = player1Age * 5 + player1Height;
+
+var player2Height = 170;
+var player2Age = 322;
+var player2Score = player2Age * 5 + player2Height;
+
+if (johnScore > player1Score && johnScore > player2Score) {
+    console.log('John wins with a score of ' + johnScore) 
+} else if (player1Score > johnScore && player1Score > player2Score) {
+    console.log('Player 1 wins with a score of ' +player1Score)
+} else if (player2Score > johnScore && player2Score > player1Score) {
+    console.log('Player 2 wins with a score of ' + player2Score)
+} else {
+    console.log('All 3 players tied with a score of ' + johnScore)
+}
+
+//**************************************************************************
+*/
+
+//  Lecture 6: Functions
+
+/*
+function calculateAge(year){
+    var age = 2018 - year
+    return age
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1969);
+var ageMary = calculateAge(1948);
+
+
+function yearsUntilRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    
+    if(retirement >= 0){
+    console.log(name + ' retires in ' + retirement + ' years.');
+  } else {
+      console.log(name + ' is already retired.')
+  }
+}
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mary', 1948);
+
+//*************************************************************************
+*/
+
+//  Lecture 7: Functions and Expressions
+
+// a function expression is something like:
+// var x = function plusFive(number)
+
+
+// a function expression produces a value or outcome;
+// a function statement performs an action;
+
+// Expression =
+//  3 + 4;
+//  var x = 3;
+
+// statement =
+//  if (x === 3) {
+//  then do something;
+// }
+
+//****************************************************************************
+
+//  Lecture 9: Arrays 
+
+/*
+var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+console.log(names[1]);
+
+names[1] = 'Ben';
+console.log(names);
+
+var john = ['John', 'Smith', 1990, 'Teacher', false];
+
+john.push('blue'); // adds to end of array;
+
+john.unshift('Mr.') // adds to front of array;
+
+john.pop(); // removes and then returns last value of array;
+
+john.shift(); // removes and returns first value of array;
+
+alert(john.indexOf('Smith')); // returns index of element; used mainly to see if 
+                            // value is in array or not; if not returns -1
+
+console.log(john)
+
+if (john.indexOf('Teacher') === -1) {
+    console.log("John is not a teacher!")
+} else {
+    console.log('John is indeed a teacher')
+}
+
+//*****************************************************************************
+*/
+
+//  Lecture 10: Objects
+
+/*
+var john = {
+    name: 'John',
+    last: "Smith",
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false
+}
+console.log(john.last);
+console.log(john['last']);
+
+var xyz = 'job';
+console.log(john[xyz]);
+
+john.last = 'Miller';
+john['job'] = 'programer';
+console.log(john);
+
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane.married = true;
+console.log(jane);
+
+//****************************************************************************
+*/
+
+// Lecture 11: Objects & Methods
+/*
+//   Version 1.0
+
+var john = {
+    name: 'John',
+    last: "Smith",
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    calculateAge: function(yearOfBirth) {
+        return 2018 - this.yearOfBirth;
+    }
+}
+
+//console.log(john.calculateAge(1985));
+
+console.log(john.calculateAge())
+
+var age = john.calculateAge();
+john.age = age;
+console.log(john)
+//---------------------
+*/
+//  Version 2.0
+/*
+var john = {
+    name: 'John',
+    last: "Smith",
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    calculateAge: function(yearOfBirth) {
+        this.age = 2018 - this.yearOfBirth;
+    }
+}
+
+john.calculateAge()
+console.log(john)
+*/
+
+//var practice = {
+//    start: 301,
+//    dart1: 60,
+//    dart2: 20,
+//    dart3: 40,
+//    total: this.dart1 + this.dart2 + this.dart3;
+//}
+//
+//practice.dart1;
+//
+
+//*****************************************************************//
+
+//   Lecture 12 : Loops and Iteration 
+//----------------------
+//     FOR LOOP
+//---------------------
+
+//for (var i = 0; i <= 10; i++) {
+//    console.log(i);
+//}
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+//
+//for (var i = 0; i < names.length; i++) {
+//    console.log(names[i]);
+//}
+//
+//for (var i = names.length - 1; i >= 0; i--) {
+//    console.log(names[i]) 
+//}
+
+//---------------------
+//    WHILE LOOP 
+//---------------------
+
+//var i = 0;
+//while( i < names.length) {
+//    console.log(names[i]);
+//    i++
+//}
+//
+//for (var i = 1; i <= 5; i++) {
+//    console.log(i);
+//    
+//    if (i === 3){
+//        break;
+//    }
+//}
+//
+//for (var i = 0; i <= 5; i++) {
+//    if (i === 3) {
+//        continue;
+//    }
+//    console.log(i);
+//};
+
+//***************************************************************//
+
+//  CODING CHALLENGE 2
+//-----------------------------
+//var today = 2018;
+//var years = [1985, 1990, 1995, 2000, 2005, 2010, 2015];
+//var array = [];
+
+//function over18(age) {
+//    if (age > 18) {
+//        return 'Yes'
+//    } else {
+//        return 'No'
+//    }
+//}
+//
+//for (var i = 0; i < years.length; i++) {
+//    array.push(today - years[i]);
+//}
+//console.log(array)
+//for (var t = 0; t < array.length; t++) {
+//    console.log('over 18? ' + over18(array[t]))
+//}
+
+//function printFullAge(array) {
+//  console.log(years.map(ele => today - ele > 18))
+//}
+//
+//printFullAge(years)
